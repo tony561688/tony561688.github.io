@@ -1,0 +1,227 @@
+:root {
+  --deep-obsidian: #000000;
+  --panel-black: #0a0a0a;
+  --ghost-gray: #1a1a1a;
+  --surface: #131313;
+  --on-surface: #e2e2e2;
+  --on-surface-variant: #d0c5af;
+  --metallic-gold: #d4af37;
+  --primary: #f2ca50;
+  --muted-gold: #8c7325;
+  --outline: #99907c;
+  --container-max: 1440px;
+  --gutter: 24px;
+  --margin-desktop: 80px;
+  --margin-mobile: 24px;
+  --section-gap: 160px;
+  --font-display: 'Metropolis', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+#root,
+.app-root {
+  min-height: 100vh;
+}
+
+.app-root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--deep-obsidian);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  line-height: 1;
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.04) 50%);
+  background-size: 100% 4px;
+}
+
+.crt-vignette-global {
+  position: fixed;
+  inset: 0;
+  z-index: 89;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.35) 100%);
+}
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 120px var(--margin-mobile) var(--section-gap);
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    padding-left: var(--margin-desktop);
+    padding-right: var(--margin-desktop);
+  }
+}
+
+.label-caps {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.nav-item {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.headline-lg {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.headline-md {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.display-hero {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 14vw, 120px);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.body-lg {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+.body-md {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #1a1a1a 0%, var(--metallic-gold) 45%, var(--primary) 60%, var(--muted-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metallic-gradient-text {
+  background: linear-gradient(135deg, var(--metallic-gold) 0%, var(--primary) 50%, var(--muted-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.editorial-line {
+  height: 1px;
+  width: 100%;
+  background: var(--ghost-gray);
+}
+
+.btn-outline-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border: 1px solid var(--metallic-gold);
+  color: var(--metallic-gold);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+  background: var(--metallic-gold);
+  color: var(--deep-obsidian);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Route fade (page-to-page) */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 360ms ease;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 280ms ease;
+}

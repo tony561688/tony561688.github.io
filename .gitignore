@@ -1,0 +1,8 @@
+node_modules
+dist
+*.local
+.DS_Store
+
+# Local design artifacts (not needed for GitHub Pages)
+stitch_markdown_prototype_generator/
+stitch_markdown_prototype_generator.zip

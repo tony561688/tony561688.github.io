@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Metropolis:wght@500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "on-error-container": "#ffdad6",
+                    "panel-black": "#0A0A0A",
+                    "metallic-gold": "#D4AF37",
+                    "on-primary": "#3c2f00",
+                    "inverse-primary": "#735c00",
+                    "on-surface-variant": "#d0c5af",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-primary-fixed": "#241a00",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-container": "#254188",
+                    "muted-gold": "#8C7325",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#313030",
+                    "on-secondary-container": "#bab8b7",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "tertiary": "#bfcdff",
+                    "ghost-gray": "#1A1A1A",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-highest": "#353535",
+                    "on-surface": "#e2e2e2",
+                    "tertiary-container": "#97b0ff",
+                    "surface-dim": "#131313",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-variant": "#353535",
+                    "surface-tint": "#e9c349",
+                    "on-error": "#690005",
+                    "on-background": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#474646",
+                    "outline": "#99907c",
+                    "deep-obsidian": "#000000",
+                    "on-tertiary": "#082b72",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-container": "#4a4949",
+                    "inverse-on-surface": "#303030",
+                    "on-tertiary-fixed": "#00174b",
+                    "on-primary-container": "#554300",
+                    "surface-bright": "#393939",
+                    "primary": "#f2ca50",
+                    "surface": "#131313",
+                    "background": "#131313",
+                    "secondary": "#c9c6c5",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "surface-container": "#1f1f1f",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "outline-variant": "#4d4635"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "margin-mobile": "24px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "nav-item": ["Metropolis"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Metropolis"],
+                    "label-caps": ["Metropolis"],
+                    "display-hero": ["Metropolis"],
+                    "display-hero-mobile": ["Metropolis"],
+                    "headline-md": ["Metropolis"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "nav-item": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "800"}],
+                    "display-hero": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "display-hero-mobile": ["64px", {"lineHeight": "105%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "headline-md": ["32px", {"lineHeight": "130%", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e2e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .scanlines {
+            background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.05) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+        }
+        .crt-vignette {
+            background: radial-gradient(circle, transparent 70%, rgba(0, 0, 0, 0.4) 100%);
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+        }
+        .gold-glow-hover:hover {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Old TV Aesthetic Overlays -->
+<div class="scanlines"></div>
+<div class="crt-vignette"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 right-0 w-full flex justify-between items-start px-margin-desktop py-gutter max-w-container-max mx-auto w-full z-50 bg-transparent">
+<div class="font-display-hero text-headline-lg tracking-tighter text-on-surface dark:text-on-surface">
+            TONY
+        </div>
+<div class="flex gap-8 items-start">
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Home</a>
+<a class="font-nav-item text-nav-item uppercase text-primary border-b border-primary pb-2 hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Works</a>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">About Me</a>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300 scale-95 duration-200" href="#">Contact Me</a>
+</div>
+</nav>
+<main class="pt-40 px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<!-- Section Header -->
+<header class="mb-24 flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-metallic-gold mb-4 block">PORTFOLIO</span>
+<h1 class="font-display-hero text-headline-lg md:text-display-hero max-w-4xl">Selected Works.</h1>
+</div>
+<div class="hidden md:block">
+<p class="font-body-lg text-on-surface-variant max-w-xs text-right">
+                    A curation of digital experiences crafted with precision and editorial discipline.
+                </p>
+</div>
+</header>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-ghost-gray border border-ghost-gray">
+<!-- Project Card 1 -->
+<div class="group relative bg-deep-obsidian p-8 transition-colors duration-500 hover:bg-panel-black">
+<div class="aspect-[16/10] bg-panel-black border border-ghost-gray flex items-center justify-center group-hover:border-metallic-gold transition-colors duration-500 overflow-hidden relative">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-metallic-gold transition-colors">Thumbnail Placeholder</span>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-gradient-to-tr from-metallic-gold to-transparent"></div>
+</div>
+<div class="mt-8 flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-metallic-gold transition-colors">Aura Systems</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">Brand Identity / Web Design</p>
+</div>
+<span class="material-symbols-outlined text-ghost-gray group-hover:text-metallic-gold transition-colors">north_east</span>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative bg-deep-obsidian p-8 transition-colors duration-500 hover:bg-panel-black">
+<div class="aspect-[16/10] bg-panel-black border border-ghost-gray flex items-center justify-center group-hover:border-metallic-gold transition-colors duration-500 overflow-hidden relative">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-metallic-gold transition-colors">Thumbnail Placeholder</span>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-gradient-to-tr from-metallic-gold to-transparent"></div>
+</div>
+<div class="mt-8 flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-metallic-gold transition-colors">Nocturnal Lab</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">Creative Direction / 3D Art</p>
+</div>
+<span class="material-symbols-outlined text-ghost-gray group-hover:text-metallic-gold transition-colors">north_east</span>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="group relative bg-deep-obsidian p-8 transition-colors duration-500 hover:bg-panel-black">
+<div class="aspect-[16/10] bg-panel-black border border-ghost-gray flex items-center justify-center group-hover:border-metallic-gold transition-colors duration-500 overflow-hidden relative">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-metallic-gold transition-colors">Thumbnail Placeholder</span>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-gradient-to-tr from-metallic-gold to-transparent"></div>
+</div>
+<div class="mt-8 flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-metallic-gold transition-colors">Vortex Collective</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">Motion Design / Interaction</p>
+</div>
+<span class="material-symbols-outlined text-ghost-gray group-hover:text-metallic-gold transition-colors">north_east</span>
+</div>
+</div>
+<!-- Project Card 4 -->
+<div class="group relative bg-deep-obsidian p-8 transition-colors duration-500 hover:bg-panel-black">
+<div class="aspect-[16/10] bg-panel-black border border-ghost-gray flex items-center justify-center group-hover:border-metallic-gold transition-colors duration-500 overflow-hidden relative">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-metallic-gold transition-colors">Thumbnail Placeholder</span>
+<div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity bg-gradient-to-tr from-metallic-gold to-transparent"></div>
+</div>
+<div class="mt-8 flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-metallic-gold transition-colors">Primal Echoes</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">Experimental UI / Sonic Design</p>
+</div>
+<span class="material-symbols-outlined text-ghost-gray group-hover:text-metallic-gold transition-colors">north_east</span>
+</div>
+</div>
+</div>
+<!-- Sticky Note Callout (Editorial Style) -->
+<div class="mt-32 border-t border-metallic-gold pt-12 flex justify-between">
+<div class="max-w-md">
+<h4 class="font-label-caps text-label-caps text-metallic-gold mb-6 uppercase">System Instruction</h4>
+<p class="font-body-lg text-on-surface italic opacity-80">
+                    "Transition: Page-to-page fade. High-fidelity visual persistence during navigation events."
+                </p>
+</div>
+<div class="flex items-end">
+<button class="px-12 py-4 border border-metallic-gold font-nav-item text-nav-item text-metallic-gold uppercase transition-all duration-300 hover:bg-metallic-gold hover:text-deep-obsidian">
+                    View Archive
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-ghost-gray bg-background dark:bg-background flex justify-between items-center px-margin-desktop py-12 w-full">
+<div class="font-nav-item text-nav-item text-primary uppercase">TONY</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">© 2024 TONY. ALL RIGHTS RESERVED.</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">Instagram</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">Behance</a>
+</div>
+</footer>
+</body></html>

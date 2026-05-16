@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "on-error-container": "#ffdad6",
+                    "panel-black": "#0A0A0A",
+                    "metallic-gold": "#D4AF37",
+                    "on-primary": "#3c2f00",
+                    "inverse-primary": "#735c00",
+                    "on-surface-variant": "#d0c5af",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-primary-fixed": "#241a00",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-container": "#254188",
+                    "muted-gold": "#8C7325",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#313030",
+                    "on-secondary-container": "#bab8b7",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "tertiary": "#bfcdff",
+                    "ghost-gray": "#1A1A1A",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-highest": "#353535",
+                    "on-surface": "#e2e2e2",
+                    "tertiary-container": "#97b0ff",
+                    "surface-dim": "#131313",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-variant": "#353535",
+                    "surface-tint": "#e9c349",
+                    "on-error": "#690005",
+                    "on-background": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#474646",
+                    "outline": "#99907c",
+                    "deep-obsidian": "#000000",
+                    "on-tertiary": "#082b72",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-container": "#4a4949",
+                    "inverse-on-surface": "#303030",
+                    "on-tertiary-fixed": "#00174b",
+                    "on-primary-container": "#554300",
+                    "surface-bright": "#393939",
+                    "primary": "#f2ca50",
+                    "surface": "#131313",
+                    "background": "#131313",
+                    "secondary": "#c9c6c5",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "surface-container": "#1f1f1f",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "outline-variant": "#4d4635"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "margin-mobile": "24px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "nav-item": ["Metropolis", "Inter", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "headline-lg": ["Metropolis", "Inter", "sans-serif"],
+                    "label-caps": ["Metropolis", "Inter", "sans-serif"],
+                    "display-hero": ["Metropolis", "Inter", "sans-serif"],
+                    "display-hero-mobile": ["Metropolis", "Inter", "sans-serif"],
+                    "headline-md": ["Metropolis", "Inter", "sans-serif"],
+                    "body-lg": ["Inter", "sans-serif"]
+            },
+            "fontSize": {
+                    "nav-item": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "800"}],
+                    "display-hero": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "display-hero-mobile": ["64px", {"lineHeight": "105%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "headline-md": ["32px", {"lineHeight": "130%", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scanlines {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(255, 255, 255, 0.05) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+        .metallic-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F2CA50 50%, #8C7325 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-deep-obsidian text-on-surface selection:bg-metallic-gold selection:text-deep-obsidian min-h-screen flex flex-col font-body-md overflow-x-hidden">
+<!-- Scanline Overlay (Old TV Motif) -->
+<div class="fixed inset-0 scanlines z-40"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-full z-50 flex justify-between items-start px-margin-desktop py-gutter max-w-container-max mx-auto w-full bg-transparent">
+<div class="font-display-hero text-headline-lg tracking-tighter text-on-surface dark:text-on-surface">
+            TONY
+        </div>
+<nav class="flex space-x-12 mt-4">
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Works</a>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About Me</a>
+<a class="font-nav-item text-nav-item uppercase text-primary border-b border-primary pb-2 transition-colors duration-300" href="#">Contact Me</a>
+</nav>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center pt-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Hero Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full items-center">
+<!-- Left Side: Avatar & Identity -->
+<div class="md:col-span-5 flex flex-col items-start space-y-8">
+<div class="relative">
+<div class="w-48 h-48 rounded-full border border-ghost-gray bg-panel-black flex items-center justify-center overflow-hidden group hover:border-metallic-gold transition-colors duration-500">
+<span class="material-symbols-outlined text-ghost-gray text-8xl group-hover:text-metallic-gold transition-colors duration-500" data-icon="person">person</span>
+</div>
+<!-- Sticky Note Callout -->
+<div class="absolute -right-8 -bottom-4 bg-metallic-gold text-deep-obsidian px-4 py-2 font-label-caps text-label-caps rotate-3 shadow-xl">
+                        Transition: Page-to-page fade.
+                    </div>
+</div>
+<div>
+<h1 class="font-display-hero text-headline-lg md:text-display-hero leading-none tracking-tighter mb-4 metallic-text">
+                        SAY HELLO.
+                    </h1>
+<p class="font-body-lg text-on-surface-variant max-w-md">
+                        Open for select creative collaborations and consulting opportunities for high-end professional identities.
+                    </p>
+</div>
+</div>
+<!-- Right Side: Contact Cluster -->
+<div class="md:col-span-7 flex flex-col space-y-12 md:pl-20">
+<!-- GitHub Section (Prominent) -->
+<div class="group border border-ghost-gray p-12 hover:border-metallic-gold transition-all duration-500 relative bg-panel-black overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="space-y-2">
+<span class="font-label-caps text-label-caps text-muted-gold">ENGINEERING / SOURCE</span>
+<h2 class="font-headline-md text-on-surface">GITHUB</h2>
+</div>
+<span class="material-symbols-outlined text-metallic-gold text-5xl transform group-hover:scale-110 transition-transform duration-300" data-icon="code">code</span>
+</div>
+<div class="mt-8 flex items-center text-on-surface-variant group-hover:text-metallic-gold transition-colors">
+<span class="font-nav-item text-nav-item">@TONY-WORKS</span>
+<span class="material-symbols-outlined ml-2" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+<!-- Secondary Contacts Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Email -->
+<div class="border-b border-ghost-gray pb-6 group">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">EMAIL</span>
+<a class="font-headline-md text-on-surface hover:text-metallic-gold transition-colors duration-300" href="mailto:hello@tony.luxury">hello@tony.luxury</a>
+</div>
+<!-- Socials -->
+<div class="border-b border-ghost-gray pb-6 group">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">SOCIALS</span>
+<div class="flex space-x-6">
+<a class="font-nav-item text-nav-item uppercase text-on-surface hover:text-metallic-gold transition-colors duration-300" href="#">Instagram</a>
+<a class="font-nav-item text-nav-item uppercase text-on-surface hover:text-metallic-gold transition-colors duration-300" href="#">LinkedIn</a>
+<a class="font-nav-item text-nav-item uppercase text-on-surface hover:text-metallic-gold transition-colors duration-300" href="#">Behance</a>
+</div>
+</div>
+</div>
+<!-- Action CTA -->
+<div class="pt-8">
+<button class="border border-metallic-gold text-metallic-gold px-12 py-6 font-nav-item text-nav-item uppercase hover:bg-metallic-gold hover:text-deep-obsidian transition-all duration-300 tracking-widest flex items-center group">
+                        Inquiry Form 
+                        <span class="material-symbols-outlined ml-4 group-hover:translate-x-2 transition-transform" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Aesthetic Spacer -->
+<div class="h-section-gap"></div>
+<!-- Footer -->
+<footer class="w-full border-t border-ghost-gray bg-background dark:bg-background flex justify-between items-center px-margin-desktop py-12 w-full mt-auto">
+<div class="font-nav-item text-nav-item text-primary uppercase">
+            TONY
+        </div>
+<div class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">
+            © 2024 TONY. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">Instagram</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">Behance</a>
+</div>
+</footer>
+</body></html>

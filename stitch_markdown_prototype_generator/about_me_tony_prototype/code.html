@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "on-error-container": "#ffdad6",
+                    "panel-black": "#0A0A0A",
+                    "metallic-gold": "#D4AF37",
+                    "on-primary": "#3c2f00",
+                    "inverse-primary": "#735c00",
+                    "on-surface-variant": "#d0c5af",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-primary-fixed": "#241a00",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-container": "#254188",
+                    "muted-gold": "#8C7325",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#313030",
+                    "on-secondary-container": "#bab8b7",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "tertiary": "#bfcdff",
+                    "ghost-gray": "#1A1A1A",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-highest": "#353535",
+                    "on-surface": "#e2e2e2",
+                    "tertiary-container": "#97b0ff",
+                    "surface-dim": "#131313",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-variant": "#353535",
+                    "surface-tint": "#e9c349",
+                    "on-error": "#690005",
+                    "on-background": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#474646",
+                    "outline": "#99907c",
+                    "deep-obsidian": "#000000",
+                    "on-tertiary": "#082b72",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-container": "#4a4949",
+                    "inverse-on-surface": "#303030",
+                    "on-tertiary-fixed": "#00174b",
+                    "on-primary-container": "#554300",
+                    "surface-bright": "#393939",
+                    "primary": "#f2ca50",
+                    "surface": "#131313",
+                    "background": "#131313",
+                    "secondary": "#c9c6c5",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "surface-container": "#1f1f1f",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "outline-variant": "#4d4635"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "margin-mobile": "24px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "nav-item": ["Metropolis"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Metropolis"],
+                    "label-caps": ["Metropolis"],
+                    "display-hero": ["Metropolis"],
+                    "display-hero-mobile": ["Metropolis"],
+                    "headline-md": ["Metropolis"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "nav-item": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "800"}],
+                    "display-hero": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "display-hero-mobile": ["64px", {"lineHeight": "105%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "headline-md": ["32px", {"lineHeight": "130%", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            overflow-x: hidden;
+        }
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 50%,
+                rgba(255, 255, 255, 0.02) 50%
+            );
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 100;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #D4AF37, #f2ca50, #8C7325);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<div class="scanlines"></div>
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 w-full z-50 bg-transparent">
+<nav class="flex justify-between items-start px-margin-desktop py-gutter max-w-container-max mx-auto w-full">
+<div class="font-display-hero text-headline-lg tracking-tighter text-on-surface dark:text-on-surface">TONY</div>
+<div class="flex space-x-8">
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Works</a>
+<a class="font-nav-item text-nav-item uppercase text-primary border-b border-primary pb-2" href="#">About Me</a>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact Me</a>
+</div>
+</nav>
+</header>
+<main class="relative min-h-screen pt-[200px] pb-section-gap px-margin-desktop max-w-container-max mx-auto">
+<!-- Hero Section -->
+<section class="grid grid-cols-12 gap-gutter mb-32">
+<div class="col-span-12 md:col-span-10">
+<h1 class="font-display-hero text-display-hero gold-gradient-text uppercase mb-12 leading-[0.9]">
+                    HELLO WORLD
+                </h1>
+</div>
+<!-- Sticky Note Mockup -->
+<div class="col-span-12 md:col-start-9 md:col-span-4 lg:col-start-10 lg:col-span-3">
+<div class="bg-panel-black border border-metallic-gold p-6 transform rotate-2 shadow-xl">
+<p class="font-label-caps text-label-caps text-metallic-gold mb-2">Internal Note</p>
+<p class="font-body-md text-body-md text-primary leading-tight">Transition: Page-to-page fade.</p>
+</div>
+</div>
+</section>
+<!-- Profile / Grid Content -->
+<section class="grid grid-cols-12 gap-gutter border-t border-metallic-gold pt-12">
+<div class="col-span-12 md:col-span-4 mb-12">
+<div class="aspect-[3/4] bg-panel-black border border-ghost-gray flex items-center justify-center relative group overflow-hidden">
+<div class="absolute inset-0 bg-deep-obsidian opacity-20 transition-opacity group-hover:opacity-0"></div>
+<img alt="Tony - Creative Director" class="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="A cinematic, high-contrast portrait of a sophisticated male creative director in his late 30s, dressed in a sharp black designer turtleneck. The lighting is dramatic chiaroscuro style with warm golden rim light against a deep obsidian background. The mood is authoritative and enigmatic, reflecting a premium luxury brand aesthetic with sharp focus and professional editorial photography quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9kfl6FWZXBKLXzEG99HHapVdveRsPDDalyccOSo1RwaIO2RPGuW52mv0bf2ev0l6SCi2VGUPZlRqQlGJs2BfI9_5LhgR71folBXjBicYeMR4GZ_YTJwwtPrv-AYxKDzVBbBnwns_zbmDOvopBBpsfMYatYsfFC_bCh015q0ctJKaxVBSCxZ6yekHlhaoauSksos-dUk2xX80pWNvKw7Q8VYmbKgbQQ1gzXI4wJqy44EIR94iaqEX9J422h5KEStYa1LOFnjForGM"/>
+</div>
+</div>
+<div class="col-span-12 md:col-start-6 md:col-span-7 flex flex-col justify-center">
+<p class="font-label-caps text-label-caps text-metallic-gold mb-8">BIOGRAPHY / PHILOSOPHY</p>
+<div class="space-y-8">
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed max-w-2xl">
+                        Based in the intersection of high-fashion aesthetics and technical precision, Tony is a multi-disciplinary designer focused on digital experiences that command attention. 
+                    </p>
+<div class="w-16 h-[1px] bg-ghost-gray"></div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">
+                        Currently crafting immersive narratives for global luxury houses. My work is defined by the absence of noise—prioritizing structure, typography, and cinematic lighting to create digital environments that feel as tangible as physical architecture.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Bento Placeholder Section -->
+<section class="mt-section-gap grid grid-cols-12 gap-gutter">
+<div class="col-span-12 mb-12">
+<h2 class="font-headline-md text-headline-md text-on-surface">Curated Disciplines</h2>
+</div>
+<div class="col-span-12 md:col-span-8 h-80 border border-ghost-gray bg-panel-black p-8 flex flex-col justify-end hover:border-metallic-gold transition-colors group">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-metallic-gold mb-4">01. ART DIRECTION</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Defining visual languages that resonate with elite audiences through restraint and precision.</p>
+</div>
+<div class="col-span-12 md:col-span-4 h-80 border border-ghost-gray bg-panel-black p-8 flex flex-col justify-end hover:border-metallic-gold transition-colors group">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-metallic-gold mb-4">02. UI/UX</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Architecture for the sophisticated web.</p>
+</div>
+<div class="col-span-12 md:col-span-4 h-80 border border-ghost-gray bg-panel-black p-8 flex flex-col justify-end hover:border-metallic-gold transition-colors group">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-metallic-gold mb-4">03. MOTION</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Fluidity in stillness.</p>
+</div>
+<div class="col-span-12 md:col-span-8 h-80 border border-ghost-gray bg-panel-black p-8 flex flex-col justify-end hover:border-metallic-gold transition-colors group">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-metallic-gold mb-4">04. PHOTOGRAPHY</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Capturing the cinematic reality of luxury products.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-ghost-gray bg-background dark:bg-background">
+<div class="flex justify-between items-center px-margin-desktop py-12 w-full max-w-container-max mx-auto">
+<div class="font-nav-item text-nav-item text-primary">TONY</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant">
+                © 2024 TONY. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex space-x-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">Instagram</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">Behance</a>
+</div>
+</div>
+</footer>
+<!-- Decorative Grid Overlay (Subtle) -->
+<div class="fixed inset-0 pointer-events-none z-[-1] opacity-[0.03]">
+<div class="h-full w-full max-w-container-max mx-auto px-margin-desktop grid grid-cols-12 gap-gutter">
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+<div class="border-x border-on-surface h-full"></div>
+</div>
+</div>
+</body></html>

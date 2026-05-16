@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Metropolis:wght@500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "on-error-container": "#ffdad6",
+                    "panel-black": "#0A0A0A",
+                    "metallic-gold": "#D4AF37",
+                    "on-primary": "#3c2f00",
+                    "inverse-primary": "#735c00",
+                    "on-surface-variant": "#d0c5af",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-primary-fixed": "#241a00",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-container": "#254188",
+                    "muted-gold": "#8C7325",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#313030",
+                    "on-secondary-container": "#bab8b7",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "tertiary": "#bfcdff",
+                    "ghost-gray": "#1A1A1A",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-highest": "#353535",
+                    "on-surface": "#e2e2e2",
+                    "tertiary-container": "#97b0ff",
+                    "surface-dim": "#131313",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-variant": "#353535",
+                    "surface-tint": "#e9c349",
+                    "on-error": "#690005",
+                    "on-background": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#474646",
+                    "outline": "#99907c",
+                    "deep-obsidian": "#000000",
+                    "on-tertiary": "#082b72",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-container": "#4a4949",
+                    "inverse-on-surface": "#303030",
+                    "on-tertiary-fixed": "#00174b",
+                    "on-primary-container": "#554300",
+                    "surface-bright": "#393939",
+                    "primary": "#f2ca50",
+                    "surface": "#131313",
+                    "background": "#131313",
+                    "secondary": "#c9c6c5",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "surface-container": "#1f1f1f",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "outline-variant": "#4d4635"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "margin-mobile": "24px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "nav-item": ["Metropolis"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Metropolis"],
+                    "label-caps": ["Metropolis"],
+                    "display-hero": ["Metropolis"],
+                    "display-hero-mobile": ["Metropolis"],
+                    "headline-md": ["Metropolis"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "nav-item": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "800"}],
+                    "display-hero": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "display-hero-mobile": ["64px", {"lineHeight": "105%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "headline-md": ["32px", {"lineHeight": "130%", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            overflow: hidden; /* Restrict scrolling as per requirement */
+        }
+        .scanlines {
+            background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.05) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+        }
+        .editorial-line {
+            height: 1px;
+            background-color: #1A1A1A;
+            width: 100%;
+        }
+        .metallic-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F2CA50 50%, #8C7325 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-metallic-gold selection:text-deep-obsidian">
+<div class="scanlines"></div>
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 right-0 w-full z-50 flex justify-between items-start px-margin-desktop py-gutter max-w-container-max mx-auto w-full">
+<!-- Logo is suppressed here because it's the Hero, but Brand Label for small screens -->
+<div class="md:hidden font-display-hero text-headline-lg tracking-tighter text-on-surface">TONY</div>
+<nav class="ml-auto">
+<ul class="flex space-x-12">
+<li>
+<a class="font-nav-item text-nav-item uppercase text-primary border-b border-primary pb-2 transition-colors duration-300" href="#">Home</a>
+</li>
+<li>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Works</a>
+</li>
+<li>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">About Me</a>
+</li>
+<li>
+<a class="font-nav-item text-nav-item uppercase text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Contact Me</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class="relative min-h-screen flex flex-col justify-center px-margin-desktop">
+<!-- Hero Section -->
+<div class="max-w-container-max mx-auto w-full grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-10">
+<div class="font-label-caps text-label-caps text-metallic-gold mb-8 uppercase tracking-widest">
+                    Multidisciplinary Design Practice
+                </div>
+<h1 class="font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface leading-none mb-12">
+                    TONY
+                </h1>
+<div class="editorial-line mb-12 bg-metallic-gold opacity-50"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+<div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                            Crafting digital experiences that balance architectural precision with cinematic atmosphere. Specializing in high-end luxury interfaces and technical artistry.
+                        </p>
+</div>
+<div class="flex flex-col items-start md:items-end">
+<button class="px-8 py-4 border border-metallic-gold text-metallic-gold font-nav-item text-nav-item uppercase tracking-widest hover:bg-metallic-gold hover:text-panel-black transition-all duration-300">
+                            Explore Portfolio
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticky Note Callout -->
+<div class="fixed bottom-margin-desktop right-margin-desktop z-40">
+<div class="bg-panel-black border border-ghost-gray p-6 max-w-xs shadow-2xl">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-metallic-gold" style="font-variation-settings: 'FILL' 1;">info</span>
+<span class="font-label-caps text-label-caps text-on-surface">SYSTEM NOTE</span>
+</div>
+<p class="font-body-md text-body-md text-on-secondary-container italic">
+                    Transition: Fade in/out between routes. No scroll effects.
+                </p>
+<div class="mt-4 editorial-line opacity-20"></div>
+<div class="mt-2 text-[10px] font-label-caps text-outline uppercase">Core Interaction Model v1.0</div>
+</div>
+</div>
+</main>
+<!-- Visual Anchor Decorations -->
+<div class="fixed bottom-0 left-0 p-margin-desktop pointer-events-none">
+<div class="font-label-caps text-label-caps text-ghost-gray flex flex-col space-y-4">
+<div class="flex items-center space-x-2">
+<span class="w-12 h-[1px] bg-ghost-gray"></span>
+<span>LAT 40.7128° N</span>
+</div>
+<div class="flex items-center space-x-2">
+<span class="w-12 h-[1px] bg-ghost-gray"></span>
+<span>LON 74.0060° W</span>
+</div>
+</div>
+</div>
+<!-- Footer Shell -->
+<footer class="fixed bottom-0 w-full z-40 bg-transparent">
+<div class="flex justify-between items-center px-margin-desktop py-8 w-full border-t border-ghost-gray">
+<div class="font-label-caps text-label-caps text-on-surface-variant">
+                © 2024 TONY. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">Instagram</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-opacity duration-500" href="#">Behance</a>
+</div>
+</div>
+</footer>
+<!-- Background Vignette for Cinematic Atmosphere -->
+<div class="fixed inset-0 pointer-events-none bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.4)_100%)]"></div>
+</body></html>

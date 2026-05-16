@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Metropolis:wght@500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#dbe1ff",
+                    "on-error-container": "#ffdad6",
+                    "panel-black": "#0A0A0A",
+                    "metallic-gold": "#D4AF37",
+                    "on-primary": "#3c2f00",
+                    "inverse-primary": "#735c00",
+                    "on-surface-variant": "#d0c5af",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-primary-fixed": "#241a00",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-high": "#2a2a2a",
+                    "on-tertiary-container": "#254188",
+                    "muted-gold": "#8C7325",
+                    "primary-container": "#d4af37",
+                    "on-secondary": "#313030",
+                    "on-secondary-container": "#bab8b7",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "tertiary": "#bfcdff",
+                    "ghost-gray": "#1A1A1A",
+                    "inverse-surface": "#e2e2e2",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-container-low": "#1b1b1b",
+                    "surface-container-highest": "#353535",
+                    "on-surface": "#e2e2e2",
+                    "tertiary-container": "#97b0ff",
+                    "surface-dim": "#131313",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-variant": "#353535",
+                    "surface-tint": "#e9c349",
+                    "on-error": "#690005",
+                    "on-background": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#474646",
+                    "outline": "#99907c",
+                    "deep-obsidian": "#000000",
+                    "on-tertiary": "#082b72",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "primary-fixed-dim": "#e9c349",
+                    "secondary-container": "#4a4949",
+                    "inverse-on-surface": "#303030",
+                    "on-tertiary-fixed": "#00174b",
+                    "on-primary-container": "#554300",
+                    "surface-bright": "#393939",
+                    "primary": "#f2ca50",
+                    "surface": "#131313",
+                    "background": "#131313",
+                    "secondary": "#c9c6c5",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "surface-container": "#1f1f1f",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "outline-variant": "#4d4635"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "container-max": "1440px",
+                    "margin-mobile": "24px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "nav-item": ["Metropolis"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Metropolis"],
+                    "label-caps": ["Metropolis"],
+                    "display-hero": ["Metropolis"],
+                    "display-hero-mobile": ["Metropolis"],
+                    "headline-md": ["Metropolis"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "nav-item": ["14px", {"lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "160%", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "120%", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "100%", "letterSpacing": "0.2em", "fontWeight": "800"}],
+                    "display-hero": ["120px", {"lineHeight": "110%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "display-hero-mobile": ["64px", {"lineHeight": "105%", "letterSpacing": "-0.04em", "fontWeight": "900"}],
+                    "headline-md": ["32px", {"lineHeight": "130%", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "160%", "letterSpacing": "0.01em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>.crt-frame {
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9), 0 0 0 20px #0A0A0A;
+    border: 2px solid #1A1A1A;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden
+    }
+.scanlines {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.03) 50%);
+    background-size: 100% 4px;
+    pointer-events: none
+    }
+.vignette {
+    background: radial-gradient(circle, transparent 40%, rgba(0, 0, 0, 0.8) 100%);
+    pointer-events: none
+    }
+.static-overlay {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCAm7-xPElqOTlhPsBG93E_l7oCtArrcbKV56gF2gF4RqR2zrcmphjI17rh1FgqRuyBvgRcfIFSty1Otz7Njfd-ykKAHW_M1ju-DIZG7XsDu0ZoE6N9FXcR4U9YCZw-0LQbsgFR1u5oTFIXUFViBu-47404Ug9PVPOVJ6xXVJ3wBTSV-b6tJnxOvK-EP7itl2CEorkQFN-gkxq-n2qOdv1iOij-WzYzS47bh5tvca4DhvwaBmjNzRsaqq1NT3KUxccfNleUq_pEFjc);
+    opacity: 0.05;
+    mix-blend-mode: screen
+    }
+.progress-line {
+    height: 1px;
+    background-color: #D4AF37;
+    box-shadow: 0 0 15px #D4AF37
+    }
+.screen-curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 100%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+    z-index: 10;
+    pointer-events: none
+    }</style>
+</head>
+<body class="bg-deep-obsidian flex items-center justify-center min-h-screen m-0 overflow-hidden">
+<!-- Main Loading Container -->
+<main class="relative z-50 flex flex-col items-center justify-center w-full h-full max-w-container-max px-margin-mobile md:px-margin-desktop">
+<!-- CRT Monitor Aesthetic Container -->
+<div class="crt-frame w-full max-w-[800px] aspect-[4/3] bg-panel-black flex flex-col items-center justify-center relative">
+<!-- Internal Screen Overlays -->
+<div class="absolute inset-0 scanlines z-20"></div>
+<div class="absolute inset-0 vignette z-30"></div>
+<div class="absolute inset-0 static-overlay z-10"></div>
+<div class="screen-curve"></div>
+<!-- Content Container -->
+<div class="relative z-40 flex flex-col items-center gap-12">
+<!-- Brand Identity -->
+<div class="flex flex-col items-center gap-2">
+<h1 class="font-display-hero text-headline-lg tracking-tighter text-on-surface uppercase opacity-80">
+                        TONY
+                    </h1>
+<div class="w-12 h-[1px] bg-metallic-gold opacity-50"></div>
+</div>
+<!-- Status Message -->
+<div class="flex flex-col items-center gap-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant tracking-[0.3em]">
+                        WARMING UP...
+                    </span>
+<!-- Faux Progress Bar -->
+<div class="w-64 h-[2px] bg-ghost-gray relative overflow-hidden">
+<div class="progress-line absolute top-0 left-0 w-[65%] h-full"></div>
+</div>
+</div>
+<!-- Metadata Faux Terminal -->
+<div class="flex flex-col items-center gap-1 opacity-30 mt-8">
+<p class="font-label-caps text-[8px] text-on-surface-variant">SIGNAL: STABLE</p>
+<p class="font-label-caps text-[8px] text-on-surface-variant">RESOLUTION: 4K LUXE</p>
+<p class="font-label-caps text-[8px] text-on-surface-variant">MODEL: T_2024_A_V1</p>
+</div>
+</div>
+<!-- Decorative CRT Elements (Knobs/Labels) -->
+<div class="absolute bottom-6 right-10 flex gap-4 opacity-20">
+<div class="w-3 h-3 rounded-full border border-on-surface-variant"></div>
+<div class="w-3 h-3 rounded-full border border-on-surface-variant"></div>
+</div>
+<div class="absolute bottom-6 left-10 opacity-20">
+<span class="font-label-caps text-[10px] text-on-surface-variant">HIGH FIDELITY</span>
+</div>
+</div>
+<!-- External Branding/Copyright -->
+<div class="mt-section-gap flex flex-col items-center gap-4">
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-40">
+                © 2024 TONY. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</main>
+<!-- Background Ambience -->
+<div class="fixed inset-0 pointer-events-none z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-panel-black to-deep-obsidian"></div>
+<!-- Subtle noise texture -->
+<div class="absolute inset-0 opacity-[0.03] mix-blend-overlay bg-repeat" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFEhAQKYVeTClNSDVC6hxVH1h89yT4LpceAm8RjbXINlwHKx2tRNhwdn3seFH3P5XqXPqIFfg5Rkdi8abJwl26ohPzhACcRh5Zr_fHdRX3taAy2jT7u1rs_PgyQ6JZwVnWW96V5QGsbB8QLQkaybnR_pLdfNeGq_ZTi03v3YJpSBqep21C4y2zzDgDpxIo7qkBXNYbOGKcCuqA4hHnuSpxh572zlYVU3CgTNf3whrSYQ6AKxb6PSKa8VqjHnY9T7diu6g4MktlKeg');"></div>
+</div>
+<!-- Hidden standard elements to comply with structure requirements without showing them in this specific view -->
+<nav aria-hidden="true" class="hidden">
+<ul>
+<li>Home</li>
+<li>Works</li>
+<li>About Me</li>
+<li>Contact Me</li>
+</ul>
+</nav>
+<!-- Footer reference but suppressed as per instructions for Task-Focused screens -->
+<footer aria-hidden="true" class="hidden">
+<span>© 2024 TONY. ALL RIGHTS RESERVED.</span>
+</footer>
+</body></html>
